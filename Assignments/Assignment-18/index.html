@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%; /* Could be more or less, depending on screen size */
+        align-items: center;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #myPara{
+font-size:20px;
+        }
+        .para{
+          color:blue;
+          border: 2px solid rgb(153, 40, 219);
+          border-radius: 10px;
+          padding:10px;
+          margin:auto;
+          background-color:aqua;
+        }
+
+</style>
+
+</head>
+<body>
+  <!-- 1. Consider you have 4 images in a file as shown below:
+Now When you click on an image it should display in a modal. */
+ -->
+  Click any image to open it in Modal
+    <br><br>
+  
+ <img src="nature1.jfif" title="Click me" alt="Natural beauty1" height="200px" id="image1" onclick="showModal('nature1.jfif')">
+ <img src="nature2.jfif" title="Click me" alt="Natural beauty1" height="200px"  id="image2" onclick="showModal('nature2.jfif')">
+ <img src="nature3.jfif" title="Click me" alt="Natural beauty1" height="200px"  id="image3" onclick="showModal('nature3.jfif') ">
+ <img src="nature4.jfif" title="Click me" alt="Natural beauty1" height="200px" id="image4" onclick="showModal('nature4.jfif')" >
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+<!-- /* 2. Create a paragraph and two buttons “zoom in ”(+) and “zoom out”(-).
+Events | JAVASCRIPT
+On each click on “zoom in”(+) , add 10px in font size of paragraph.
+And on each click on “zoom out”(-) , minus 10px in font size of paragraph. */
+
+/* 2. Display some Mobile images in browser. On click on an
+image Show the message in alert to user. */ -->
+  <hr>
+  <br><br>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, totam obcaecati asperiores optio vero harum excepturi illo placeat eaque! Ad dolorum quos sapiente tenetur perferendis consequatur iure quisquam? Exercitationem voluptatum facere tenetur quas, neque doloremque id vero 
+    pariatur iusto quod deleniti, facilis atque quam molestiae quidem! Consequatur dolorum totam ab.</p><br><br>
+    <input type="button">Zoom in</input>
+    <input type="button">Zoom in</input>
+</div>
+
+<hr>
+<br><br>
+<div class="para">
+<p id="myPara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, totam obcaecati asperiores optio vero harum excepturi illo placeat eaque! Ad dolorum quos sapiente tenetur perferendis consequatur iure quisquam? Exercitationem voluptatum facere tenetur quas, neque doloremque id vero 
+  pariatur iusto quod deleniti, facilis atque quam molestiae quidem! Consequatur dolorum totam ab.</p><br><br>
+  <center><input type="button" value="Zoom in" onclick="zoomIn()"></input>
+  <input type="button" value="Zoom out " onclick="zoomOut()"></input></center>
+</div>
+
+    <script src="./app.js">
+      
+    </script>
+</body>
+</html>
